@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yt Downloader Desktop</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Youtube Downloader</h1>
+		<form id="download-form">
+			<input type="text" id="link-input" placeholder="Cole o link do Youtube aqui..." required>
+			<div class="option-group">
+				<select id="format-select" required>
+					<option value="" disabled selected>Selecione um formato de resolução (Cole o link primeiro)</option>
+				</select>
+				<button type="submit" class="btn btn-download" id="download-button" disabled>
+					Baixar
+				</button>
+			</div>
+			<div id="progress-container" style="display: none; margin-top: 20px;">
+				<div id="progress-message" style="color: #ccc; margin-bottom: 5px;"></div>
+				<div style="background-color: #333; border-radius: 5px;">
+					<div id="progress-bar" style="width: 0%; background-color: #4caf50; height: 20px; border-radius: 5px;
+						text-align: center; color: white; transition: width 0.3s;">0%</div>
+				</div>
+				<button id="open-downloads-button" class="btn"
+					style="display: none; margin-top: 15px; background-color: #4caf50;">
+					📂 Abrir Pasta de Destino
+				</button>
+			</div>
+			<div id="status-message" class="status-message info">
+				Aguardando o link.
+			</div>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

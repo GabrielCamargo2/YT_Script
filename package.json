@@ -1,0 +1,46 @@
+{
+  "name": "ytdownloader",
+  "version": "1.1.0",
+  "description": "YouTube Downloader Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielCamargoENG/YT_Script.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Camargo",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^40.9.3",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.gabrielcamargo.ytdownloader",
+    "productName": "YT Downloader",
+    "directories": {
+      "output": "YT_Script_setup"
+    },
+    "win": {
+      "icon": "recursos/icon.png"
+    },
+    "extraResources": [
+      {
+        "from": "backend/dist/server.exe",
+        "to": "dist/server.exe"
+      },
+      {
+        "from": "frontend",
+        "to": "frontend"
+      }
+    ]
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/GabrielCamargoENG/YT_Script/issues"
+  },
+  "homepage": "https://github.com/GabrielCamargoENG/YT_Script#readme"
+}
